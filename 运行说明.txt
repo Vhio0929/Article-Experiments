@@ -1,0 +1,12 @@
+conda activate transf
+
+SX.py  顺序执行脚本
+
+
+test.py 从 tran.py中导入model （train.py 中的 model 来自 model.py）
+
+utils.py 中包括生成参考文献.txt + 翻译文本的保存路径
+
+data_pre.py 貌似没什么用，因为训练或测试时会自动执行
+
+data_pre_test.py 关闭了sort
