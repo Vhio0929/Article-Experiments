@@ -1,0 +1,80 @@
+stty: 'standard input': Inappropriate ioctl for device
+wandb: Currently logged in as: zhoukailong0929. Use `wandb login --relogin` to force relogin
+wandb: - Waiting for wandb.init()...wandb: \ Waiting for wandb.init()...wandb: wandb version 0.17.0 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.16.4
+wandb: Run data is saved locally in /root/home/zkl/vision-transformers-cifar10-main/wandb/run-20240508_062703-7jugexgp
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run vit_lr0.0001
+wandb: ⭐️ View project at https://wandb.ai/zhoukailong0929/cifar10-challange
+wandb: 🚀 View run at https://wandb.ai/zhoukailong0929/cifar10-challange/runs/7jugexgp
+==> Preparing data..
+Files already downloaded and verified
+Files already downloaded and verified
+==> Building model..
+**********************: [256.0, 128.0, 64.0]
+**********************: [256.0, 128.0, 64.0, 64.0]
+**********************: [  0. 256. 384. 448. 512.]
+====现在是LS_HAM====
+**********************: [256.0, 128.0, 64.0]
+**********************: [256.0, 128.0, 64.0, 64.0]
+**********************: [  0. 256. 384. 448. 512.]
+====现在是LS_HAM====
+**********************: [256.0, 128.0, 64.0]
+**********************: [256.0, 128.0, 64.0, 64.0]
+**********************: [  0. 256. 384. 448. 512.]
+====现在是LS_HAM====
+**********************: [256.0, 128.0, 64.0]
+**********************: [256.0, 128.0, 64.0, 64.0]
+**********************: [  0. 256. 384. 448. 512.]
+====现在是LS_HAM====
+**********************: [256.0, 128.0, 64.0]
+**********************: [256.0, 128.0, 64.0, 64.0]
+**********************: [  0. 256. 384. 448. 512.]
+====现在是LS_HAM====
+**********************: [256.0, 128.0, 64.0]
+**********************: [256.0, 128.0, 64.0, 64.0]
+**********************: [  0. 256. 384. 448. 512.]
+====现在是LS_HAM====
+cuda
+
+Epoch: 0
+Traceback (most recent call last):
+  File "train_LS.py", line 343, in <module>
+    trainloss = train(epoch)
+  File "train_LS.py", line 277, in train
+    outputs = net(inputs)
+  File "/data/anaconda3/envs/vit/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data/anaconda3/envs/vit/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/home/zkl/vision-transformers-cifar10-main/models/vit.py", line 294, in forward
+    x = self.transformer(x)
+  File "/data/anaconda3/envs/vit/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data/anaconda3/envs/vit/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/home/zkl/vision-transformers-cifar10-main/models/vit.py", line 201, in forward
+    x = attn(x) + x
+  File "/data/anaconda3/envs/vit/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data/anaconda3/envs/vit/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/home/zkl/vision-transformers-cifar10-main/models/vit.py", line 27, in forward
+    return self.fn(self.norm(x), **kwargs)
+  File "/data/anaconda3/envs/vit/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data/anaconda3/envs/vit/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/home/zkl/vision-transformers-cifar10-main/models/vit.py", line 166, in forward
+    output = self.w_concat(concat_res)
+  File "/data/anaconda3/envs/vit/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data/anaconda3/envs/vit/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data/anaconda3/envs/vit/lib/python3.8/site-packages/torch/nn/modules/linear.py", line 116, in forward
+    return F.linear(input, self.weight, self.bias)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 514.00 MiB. GPU 0 has a total capacity of 23.65 GiB of which 200.56 MiB is free. Process 1070137 has 700.00 MiB memory in use. Process 3215402 has 1.85 GiB memory in use. Process 1525329 has 19.94 GiB memory in use. Process 1525327 has 998.00 MiB memory in use. Of the allocated memory 18.34 GiB is allocated by PyTorch, and 301.45 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+wandb: - 0.027 MB of 0.027 MB uploadedwandb: \ 0.027 MB of 0.035 MB uploadedwandb: | 0.035 MB of 0.035 MB uploadedwandb: 🚀 View run vit_lr0.0001 at: https://wandb.ai/zhoukailong0929/cifar10-challange/runs/7jugexgp
+wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20240508_062703-7jugexgp/logs
