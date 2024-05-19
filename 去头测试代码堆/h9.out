@@ -1,0 +1,49 @@
+/data/anaconda3/envs/transf/lib/python3.8/site-packages/scipy/__init__.py:143: UserWarning: A NumPy version >=1.19.5 and <1.27.0 is required for this version of SciPy (detected version 1.19.2)
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+===DEVICE===: cuda
+===DEVICE===: cuda
+====DEVICE====: cuda
+========现在是MultiHeadAttention没有der========
+当前是test，sort关闭
+当前是test，sort关闭
+  0%|          | 0/1000 [00:00<?, ?it/s]当前时第3层
+第9头
+  0%|          | 0/1000 [00:01<?, ?it/s]
+Traceback (most recent call last):
+  File "h9_test6.py", line 98, in <module>
+    evaluate_test(data, model)
+  File "h9_test6.py", line 83, in evaluate_test
+    evaluate(data, model)
+  File "h9_test6.py", line 64, in evaluate
+    out = greedy_decode(model, src, src_mask, max_len=MAX_LENGTH, start_symbol=data.cn_word_dict["BOS"])
+  File "h9_test6.py", line 19, in greedy_decode
+    memory = model.encode(src, src_mask)
+  File "/root/home/zkl/Transformer2/h9_model6.py", line 714, in encode
+    return self.encoder(self.src_embed(src), src_mask)
+  File "/data/anaconda3/envs/transf/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data/anaconda3/envs/transf/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/home/zkl/Transformer2/h9_model6.py", line 656, in forward
+    x = layer(x, mask)
+  File "/data/anaconda3/envs/transf/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data/anaconda3/envs/transf/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/home/zkl/Transformer2/h9_model6.py", line 632, in forward
+    x = self.sublayer[0](x, lambda x:self.self_attn(True,x,x,x,mask))
+  File "/data/anaconda3/envs/transf/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data/anaconda3/envs/transf/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/home/zkl/Transformer2/h9_model6.py", line 592, in forward
+    return x + self.dropout(sublayer(self.norm(x)))
+  File "/root/home/zkl/Transformer2/h9_model6.py", line 632, in <lambda>
+    x = self.sublayer[0](x, lambda x:self.self_attn(True,x,x,x,mask))
+  File "/data/anaconda3/envs/transf/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data/anaconda3/envs/transf/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/home/zkl/Transformer2/h9_model6.py", line 173, in forward
+    attention_res[:, 8] = 0
+IndexError: index 8 is out of bounds for dimension 1 with size 8
