@@ -1,3 +1,6 @@
+## 训练好的模型下载
+\urL(https://drive.google.com/drive/folders/1BB2U6gKy4OV9ZDPPFwYOjakM7ksSD7Xi?usp=drive_link)
+
 ## Transformer pytorch实现  
 ### =======注意事项=======
 训练时，将data_pre.py第50行改掉
