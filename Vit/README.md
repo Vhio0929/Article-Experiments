@@ -1,3 +1,5 @@
+# 训练数据下载路径
+\url(https://drive.google.com/drive/folders/1UbUp5SdarfsgPMdz7FjHmcVsHa0NCwfN?usp=drive_link)
 # vision-transformers-cifar10
 This is your go-to playground for training Vision Transformers (ViT) and its related models on CIFAR-10, a common benchmark dataset in computer vision.
 
